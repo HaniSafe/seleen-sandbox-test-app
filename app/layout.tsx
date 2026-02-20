@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ThemeProvider } from "next-themes";
+import { DarkModeProvider } from "@/contexts/DarkModeContext";
 import Header from "@/components/Header";
 
 export const metadata: Metadata = {
@@ -16,15 +16,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className="min-h-screen bg-background font-sans antialiased">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
+        <DarkModeProvider>
           <Header />
           {children}
-        </ThemeProvider>
+        </DarkModeProvider>
       </body>
     </html>
   );
