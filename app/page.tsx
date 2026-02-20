@@ -1,4 +1,5 @@
 import Link from "next/link";
+import MyWorkGallery from "@/components/MyWorkGallery";
 
 export default function Home() {
   return (
@@ -23,6 +24,8 @@ export default function Home() {
             changes appear here via hot reload.
           </p>
         </div>
+
+        <MyWorkGallery />
 
         <div className="bg-white rounded-xl shadow-md border border-gray-200 p-6 text-center">
           <p className="text-sm text-gray-500 uppercase tracking-wide">
